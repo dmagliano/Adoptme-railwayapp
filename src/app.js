@@ -9,7 +9,7 @@ import sessionsRouter from './routes/sessions.router.js';
 
 const app = express();
 const PORT = process.env.PORT||8080;
-const connection = mongoose.connect(process.env.MONGO_URL || 'mongodb+srv://diogomagliano:VqJ8vbXbJaqjat8F@cluster0.ppgtl4o.mongodb.net/test-adoptme?retryWrites=true&w=majority')
+const connection = mongoose.connect(process.env.MONGO_URL);
 
 const test = 'test';
 
