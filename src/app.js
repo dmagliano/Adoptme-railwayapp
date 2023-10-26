@@ -11,6 +11,8 @@ const app = express();
 const PORT = process.env.PORT||8080;
 const connection = mongoose.connect(process.env.MONGO_URL)
 
+const test = 'test';
+
 app.use(express.json());
 app.use(cookieParser());
 
