@@ -9,7 +9,7 @@ import sessionsRouter from './routes/sessions.router.js';
 
 const app = express();
 const PORT = process.env.PORT||8080;
-const connection = mongoose.connect(process.env.MONGO_URL)
+const connection = mongoose.connect(process.env.MONGO_URL);
 
 const test = 'test';
 
@@ -20,5 +20,6 @@ app.use('/api/users',usersRouter);
 app.use('/api/pets',petsRouter);
 app.use('/api/adoptions',adoptionsRouter);
 app.use('/api/sessions',sessionsRouter);
+app.get('/api/ping',(req,res)=>res.send('pong'));
 
 app.listen(PORT,()=>console.log(`Listening on ${PORT}`))
